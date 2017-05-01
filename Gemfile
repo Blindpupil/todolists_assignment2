@@ -3,8 +3,7 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.8'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -41,6 +40,9 @@ group :development, :test do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+
+  # Use sqlite3 as the database for Active Record
+  gem 'sqlite3'
 end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
@@ -50,4 +52,9 @@ gem 'will_paginate', '~> 3.0.6'
 group :test do
   gem 'rspec-rails', '~> 3.0'
   gem 'capybara'
+end
+
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
 end
